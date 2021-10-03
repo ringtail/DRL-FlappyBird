@@ -116,7 +116,7 @@ class BrainDQN:
         #arg1={}
         #for k,v in args.iteritems():
         #    arg1[k]=args[k].asnumpy()
-        print 'time to copy'
+        print('time to copy')
 
     def trainQNetwork(self):
         # Step 1: obtain random minibatch from replay memory
@@ -174,8 +174,8 @@ class BrainDQN:
         else:
             state = "train"
 
-        print "TIMESTEP", self.timeStep, "/ STATE", state, \
-        "/ EPSILON", self.epsilon
+        
+        print("TIMESTEP %d STATE %s EPSILON %d" % (self.timeStep, state, self.epsilon))
 
         self.currentState = newState
         self.timeStep += 1
